@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMB Community | Discord Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .discord-btn {
+            transition: all 0.3s ease;
+            background: #5865F2;
+        }
+        
+        .discord-btn:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #5865F2;
+            border-radius: 4px;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #5865F2, #9147FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 bg-opacity-90 backdrop-blur-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-8" src="https://media.discordapp.net/attachments/1209972461748092978/1394618792247558155/static.png?ex=68777776&is=687625f6&hm=1f57bd8dbf747224e8f9e0a5dbe9de86e1834a829567caddb65b81a2ad642af0&=&format=webp&quality=lossless" alt="Server Logo">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Home</a>
+                            <a href="#features" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Features</a>
+                            <a href="#events" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Events</a>
+                            <a href="#team" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Team</a>
+                            <a href="#faq" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://discord.gg/abrNqVTUxG" class="discord-btn px-4 py-2 rounded-md text-sm font-medium text-white flex items-center">
+                        <i class="fab fa-discord mr-2"></i> Join Now
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Home</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Features</a>
+                <a href="#events" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Events</a>
+                <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Team</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">FAQ</a>
+                <a href="https://discord.gg/invitecode" class="block discord-btn px-3 py-2 rounded-md text-base font-medium text-white text-center mt-2">
+                    <i class="fab fa-discord mr-2"></i> Join Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to <span class="gradient-text">NUMB Community</span></h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8">A vibrant Discord community where gamers, creators, and tech enthusiasts come together to share, learn, and grow.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://discord.gg/abrNqVTUxG" class="discord-btn px-6 py-3 rounded-lg text-lg font-semibold text-white flex items-center justify-center">
+                            <i class="fab fa-discord mr-3"></i> Join Our Server
+                        </a>
+                        <a href="#features" class="px-6 py-3 rounded-lg text-lg font-semibold bg-gray-700 hover:bg-gray-600 transition text-white flex items-center justify-center">
+                            <i class="fas fa-info-circle mr-3"></i> Learn More
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-4">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Member">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Member">
+                            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Member">
+                        </div>
+                        <div>
+                            <p class="text-gray-300">Join <span class="font-bold text-white">500+</span> members</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center floating">
+                    <img src="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/discord-community.png" alt="Discord Community" class="w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Join Our <span class="gradient-text">Community?</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">We offer a variety of features that make our Discord server stand out from the rest.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-700 rounded-xl p-6 feature-card transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-gamepad text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Gaming Hub</h3>
+                    <p class="text-gray-300">Dedicated channels for popular games, LFG system, tournaments, and game nights with prizes.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-700 rounded-xl p-6 feature-card transition duration-300">
+                    <div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Tech & Coding</h3>
+                    <p class="text-gray-300">Programming help, project collaboration, tech discussions, and coding challenges with mentors.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-700 rounded-xl p-6 feature-card transition duration-300">
+                    <div class="w-14 h-14 bg-pink-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Creative Corner</h3>
+                    <p class="text-gray-300">Share your art, music, writing, and get constructive feedback from our creative community.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-700 rounded-xl p-6 feature-card transition duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-gem text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Premium Perks</h3>
+                    <p class="text-gray-300">Exclusive roles, private channels, custom emojis, and special giveaways for our supporters.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-700 rounded-xl p-6 feature-card transition duration-300">
+                    <div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Custom Bots</h3>
+                    <p class="text-gray-300">Our custom bots provide music, moderation, games, and unique server-specific features.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-700 rounded-xl p-6 feature-card transition duration-300">
+                    <div class="w-14 h-14 bg-yellow-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Supportive Community</h3>
+                    <p class="text-gray-300">Friendly, inclusive environment with active moderation and zero tolerance for toxicity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">1.5K+</div>
+                    <div class="text-gray-400 uppercase text-sm font-semibold">Members</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">50+</div>
+                    <div class="text-gray-400 uppercase text-sm font-semibold">Channels</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">24/7</div>
+                    <div class="text-gray-400 uppercase text-sm font-semibold">Activity</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2">100+</div>
+                    <div class="text-gray-400 uppercase text-sm font-semibold">Events</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Upcoming <span class="gradient-text">Events</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Check out what's happening in our community this month.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-gray-700 rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="h-48 bg-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-trophy text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-indigo-600 text-xs font-semibold px-3 py-1 rounded-full">Gaming</span>
+                            <span class="text-gray-400 text-sm">June 15, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Valorant Tournament</h3>
+                        <p class="text-gray-300 mb-4">Join our monthly Valorant tournament with cash prizes for top teams. Registration open now!</p>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>7:00 PM EST</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="bg-gray-700 rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="h-48 bg-purple-600 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-600 text-xs font-semibold px-3 py-1 rounded-full">Workshop</span>
+                            <span class="text-gray-400 text-sm">June 18, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Web Dev Workshop</h3>
+                        <p class="text-gray-300 mb-4">Learn modern web development techniques from our experienced members. All skill levels welcome.</p>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>5:00 PM EST</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="bg-gray-700 rounded-xl overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="h-48 bg-pink-600 flex items-center justify-center">
+                        <i class="fas fa-paint-brush text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-pink-600 text-xs font-semibold px-3 py-1 rounded-full">Art</span>
+                            <span class="text-gray-400 text-sm">June 22, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Art Showcase</h3>
+                        <p class="text-gray-300 mb-4">Show off your artwork and get feedback from professional artists in our community.</p>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <i class="far fa-clock mr-2"></i>
+                            <span>3:00 PM EST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-6 py-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition text-white font-semibold">
+                    View All Events <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our <span class="gradient-text">Team</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">The amazing people who keep this community running smoothly.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center transition duration-300 hover:shadow-lg">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 mb-4 overflow-hidden">
+                        <img src="https://media.discordapp.net/attachments/1209972461748092978/1394619412304363560/989D2549-1F7A-409A-AFA4-5F53D89D7DAC.png?ex=6877780a&is=6876268a&hm=0540524b5c202c57640c57832cb0e19d3166da5b4fb7eef45db703c0c5b942ab&=&format=webp&quality=lossless&width=617&height=617" alt="Team Member" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">XKILLU4</h3>
+                    <p class="text-indigo-400 font-medium mb-3">Founder & Admin</p>
+                    <p class="text-gray-400 text-sm">Gaming enthusiast and community builder with 5+ years of Discord experience.</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center transition duration-300 hover:shadow-lg">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-green-500 mb-4 overflow-hidden">
+                        <img src="https://media.discordapp.net/attachments/1209972461748092978/1394619412304363560/989D2549-1F7A-409A-AFA4-5F53D89D7DAC.png?ex=6877780a&is=6876268a&hm=0540524b5c202c57640c57832cb0e19d3166da5b4fb7eef45db703c0c5b942ab&=&format=webp&quality=lossless&width=617&height=617" alt="Team Member" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">XK4TTY</h3>
+                    <p class="text-blue-400 font-medium mb-3">Founder & Admin</p>
+                    <p class="text-gray-400 text-sm">Gaming enthusiast and community builder with 5+ years of Discord experience</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center transition duration-300 hover:shadow-lg">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-pink-500 to-red-500 mb-4 overflow-hidden">
+                        <img src="https://images-ext-1.discordapp.net/external/XvT96AoOy3lT2UzGDxcoRv9qtdt5zPSx79-VnGjAJiQ/%3Fsize%3D4096%26ignore%3Dtrue%29./https/cdn.discordapp.com/avatars/849634038222159883/82fe6aa6fa11d257998b54300993399f.png?format=webp&quality=lossless&width=617&height=617" alt="Team Member" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">david</h3>
+                    <p class="text-pink-400 font-medium mb-3">Dev</p>
+                    <p class="text-gray-400 text-sm">Full-stack developer and bot creator who keeps our server running smoothly.</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Members <span class="gradient-text">Say</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Don't just take our word for it - hear from our community members.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Jessica L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"I've met so many amazing people here who share my passion for game development. The feedback I've gotten on my projects has been invaluable."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ryan T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"The Valorant tournaments are so well organized! I've improved my skills dramatically thanks to the tips from better players in the server."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-700 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sophia M.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"As a digital artist, the creative feedback channels have been game-changing for me. The community is so supportive and constructive."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Got questions? We've got answers. If you can't find what you're looking for, join and ask us directly!</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-4 border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>How do I join the Discord server?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-300 hidden">
+                        <p>Simply click the "Join Now" button at the top of this page or use our invite link: discord.gg/nexuscommunity. After joining, read the rules in #welcome and react to get access to the rest of the server.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-4 border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>Are there any age restrictions?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-300 hidden">
+                        <p>Our server is open to all ages, but some channels may contain mature content (clearly marked with NSFW tags). We expect all members to behave maturely regardless of age.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-4 border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>How can I become a moderator?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-300 hidden">
+                        <p>Moderators are chosen from active, helpful community members who demonstrate good judgment. After being a positive member for several months, you may be invited to apply for the team.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-4 border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>What are the server rules?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-300 hidden">
+                        <p>Our main rules are: be respectful, no spam, no NSFW content outside marked channels, no self-promotion without permission, and no harassment of any kind. The full rules are posted in #rules.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-4 border-b border-gray-700 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg focus:outline-none">
+                        <span>How do I get support for the server?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-300 hidden">
+                        <p>For general questions, ask in #help. For issues with other members, DM a moderator (names in red/orange). For technical issues with bots, ping @Tech Support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
+            <p class="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">Connect with like-minded people, participate in exciting events, and grow together in our vibrant Discord server.</p>
+            <a href="https://discord.gg/invitecode" class="inline-block px-8 py-4 rounded-lg bg-white hover:bg-gray-100 transition text-indigo-600 font-bold text-lg">
+                <i class="fab fa-discord mr-2"></i> Join Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img class="h-8 w-8 mr-2" src="https://cdn.discordapp.com/icons/123456789012345678/abcdef1234567890abcdef1234567890.webp?size=128" alt="Server Logo">
+                        <span class="text-xl font-bold">Nexus Community</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">A welcoming Discord community for gamers, creators, and tech enthusiasts to connect, share, and grow together.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitch"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition">Team</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Nexus Community. All rights reserved. Not affiliated with Discord.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
